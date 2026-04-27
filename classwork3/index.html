@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 заданий с localStorage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>🎓 5 заданий с localStorage</h1>
+        
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="task1">1. Любимый цвет</button>
+            <button class="tab-btn" data-tab="task2">2. Счетчик посещений</button>
+            <button class="tab-btn" data-tab="task3">3. Текст заметки</button>
+            <button class="tab-btn" data-tab="task4">4. Скрыть приветствие</button>
+            <button class="tab-btn" data-tab="task5">5. Список покупок</button>
+        </nav>
+
+        <div class="task-content active" id="task1">
+            <div class="task-header">
+                <h2>💾 Задание 1: Сохранить любимый цвет</h2>
+                <p class="task-desc">Введите цвет, нажмите кнопку и цвет сохранится в localStorage</p>
+            </div>
+            <div class="task-box">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="colorInput" 
+                        placeholder="Введите любимый цвет"
+                        autocomplete="off"
+                    >
+                    <button id="saveColorBtn">Сохранить цвет</button>
+                </div>
+                <div class="result" id="colorResult"></div>
+                <button id="clearColorBtn" class="clear-btn">Очистить</button>
+            </div>
+        </div>
+
+        <div class="task-content" id="task2">
+            <div class="task-header">
+                <h2>📊 Задание 2: Счетчик посещений страницы</h2>
+                <p class="task-desc">Счетчик увеличивается при каждой загрузке страницы</p>
+            </div>
+            <div class="task-box">
+                <div class="counter-box">
+                    <p class="counter-text" id="counterText"></p>
+                </div>
+                <div class="stats">
+                    <p id="statsText"></p>
+                </div>
+                <button id="resetCounterBtn" class="reset-btn">Сбросить счетчик</button>
+            </div>
+        </div>
+
+        <div class="task-content" id="task3">
+            <div class="task-header">
+                <h2>📝 Задание 3: Запомнить текст заметки</h2>
+                <p class="task-desc">Напишите заметку, нажмите сохранить, текст восстановится при перезагрузке</p>
+            </div>
+            <div class="task-box">
+                <textarea 
+                    id="noteTextarea" 
+                    placeholder="Напишите вашу заметку здесь..."
+                ></textarea>
+                <div class="button-group">
+                    <button id="saveNoteBtn" class="save-btn">Сохранить заметку</button>
+                    <button id="clearNoteBtn" class="clear-btn">Удалить заметку</button>
+                </div>
+                <div id="noteMessage" class="message"></div>
+            </div>
+        </div>
+
+        <div class="task-content" id="task4">
+            <div class="task-header">
+                <h2>👋 Задание 4: Кнопка "Скрыть приветствие"</h2>
+                <p class="task-desc">Скройте приветствие, оно останется скрытым после перезагрузки</p>
+            </div>
+            <div class="task-box">
+                <div id="greeting" class="greeting-box">
+                    <p id="greetingText">Добро пожаловать на сайт!</p>
+                    <button id="hideGreetingBtn" class="hide-btn">Скрыть приветствие</button>
+                </div>
+                <button id="resetGreetingBtn" class="reset-btn">Показать приветствие снова</button>
+            </div>
+        </div>
+
+        <div class="task-content" id="task5">
+            <div class="task-header">
+                <h2>🛒 Задание 5: Мини-список покупок</h2>
+                <p class="task-desc">Добавляйте товары в список, он сохранится в localStorage</p>
+            </div>
+            <div class="task-box">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="itemInput" 
+                        placeholder="Введите товар"
+                        autocomplete="off"
+                    >
+                    <button id="addItemBtn">Добавить</button>
+                </div>
+                <div id="list" class="shopping-list"></div>
+                <button id="clearAllBtn" class="clear-all-btn">Очистить список</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

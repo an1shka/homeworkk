@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mini shop</h1>
+
+    <section id="registerScreen">
+        <h2>Регистрация</h2>
+
+        <form id="registerForm">
+            <div>
+                <label>Имя</label>
+                <input type="text" id="RegisterName">
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="text" id="RegisterEmail">
+            </div>
+            <div>
+                <label>Пароль</label>
+                <input type="password" id="RegisterPassword">
+            </div>
+            <button type="submit">Зарегестироватся</button>
+        </form>
+        <p id="registerError"></p>
+        <button id="goToLoginBtn">У меня уже есть аккаунт</button>
+    </section>
+
+    <!-- экран логина -->
+     <section id="loginScreen" hidden>
+        <h2>Вход</h2>
+
+        <form id="loginForm">
+            <div>
+                <label>Email</label>
+                <input type="text" id="LoginEmail">
+            </div>
+            <div>
+                <label>Пароль</label>
+                <input type="password" id="LoginPassword">
+            </div>
+            <button type="submit">Войти</button>
+        </form>
+        <p id="loginError"></p>
+        <button id="goToRegisterBtn">У меня нет аккаунта </button>
+    </section>
+
+    <!-- экран магазина -->
+      <section id="shopScreen" hidden>
+        <h2>магазин</h2>
+        <p id="userInfo"></p>
+        <button id="logoutBtn">Выйти</button>
+        <h3>Товары</h3>
+        <div id="productList">
+
+        </div>
+        <h3>Корзина</h3>
+        <div id="cartList">
+
+        </div>
+        <p id="cartTotal"></p>
+      </section>
+
+    <script src="app.js"></script>
+</body>
+</html> 
