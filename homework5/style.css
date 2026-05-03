@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.controls {
+    margin-bottom: 15px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    height: 150px;
+    object-fit: contain;
+}
+
+.card button {
+    margin-top: auto;
+}
+
+#status {
+    margin: 10px 0;
+    color: red;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.cart-controls button {
+    margin-left: 5px;
+}
+
+.total {
+    margin-top: 10px;
+    font-weight: bold;
+}
