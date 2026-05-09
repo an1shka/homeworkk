@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="loginScreen" class="screen">
+
+        <h1>Авторизация</h1>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Username"
+        >
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password"
+        >
+
+        <button id="loginBtn">
+            Войти
+        </button>
+
+        <p id="loginError"></p>
+
+    </section>
+    <section id="profileScreen" class="screen hidden">
+
+        <h1>Профиль</h1>
+
+        <div id="profileBlock"></div>
+
+        <button id="goToProductsBtn">
+            Перейти к товарам
+        </button>
+
+        <button id="logoutBtn">
+            Выйти
+        </button>
+
+    </section>
+    <section id="productsScreen" class="screen hidden">
+
+        <h1>Товары</h1>
+
+        <button id="backtoProfileBtn">
+            Профиль
+        </button>
+
+        <div
+            id="productsBlock"
+            class="products"
+        ></div>
+
+    </section>
+    <section id="detailScreen" class="screen hidden">
+
+        <h1>Информация о товаре</h1>
+
+        <button id="backToProductsBtn">
+            Назад к товарам
+        </button>
+
+        <div
+            id="productDetailBlock"
+            class="detail"
+        ></div>
+
+    </section>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
