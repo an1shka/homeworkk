@@ -100,34 +100,34 @@ function renderCart() {
     cartDiv.appendChild(totalDiv);
 }
 
-function renderProducts(list) {
-    productsDiv.innerHTML = "";
+function renderProducts(list) {    
+    productsDiv.innerHTML = "";    
 
-    list.forEach(p => {
-        const card = document.createElement("div");
-        card.className = "card";
+    list.forEach(p => {    
+        const card = document.createElement("div");    
+        card.className = "card";    
 
-        const img = document.createElement("img");
-        img.src = p.image;
+        const img = document.createElement("img");    
+        img.src = p.image;    
 
-        const title = document.createElement("h3");
-        title.textContent = p.title;
+        const title = document.createElement("h3");    
+        title.textContent = p.title;    
 
-        const price = document.createElement("p");
-        price.textContent = `${p.price}$`;
+        const price = document.createElement("p");    
+        price.textContent = `${p.price}$`;    
 
-        const desc = document.createElement("p");
-        desc.textContent = p.description.slice(0, 60) + "...";
+        const desc = document.createElement("p");    
+        desc.textContent = p.description.slice(0, 60) + "...";    
 
-        const btn = document.createElement("button");
-        btn.textContent = "В корзину";
-        btn.addEventListener("click", () => addToCart(p.id));
+        const btn = document.createElement("button");    
+        btn.textContent = "В корзину";    
+        btn.addEventListener("click", () => addToCart(p.id));    
 
-        card.appendChild(img);
-        card.appendChild(title);
-        card.appendChild(price);
-        card.appendChild(desc);
-        card.appendChild(btn);
+        card.appendChild(img);    
+        card.appendChild(title);    
+        card.appendChild(price);    
+        card.appendChild(desc);    
+        card.appendChild(btn);    
 
         productsDiv.appendChild(card);
     });
